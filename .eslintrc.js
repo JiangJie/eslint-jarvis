@@ -14,8 +14,9 @@ module.exports = {
         }
     },
     'globals': {
-        require: true,
-        module: true
+        module: true,
+        exports: true,
+        require: true
     },
     'rules': {
         // Possible Errors
