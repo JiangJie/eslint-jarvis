@@ -1,31 +1,31 @@
 module.exports = {
-    'env': {
-        'browser': true,
-        'es6': true
+    env: {
+        browser: true,
+        es6: true
     },
     // based on ESlint v5.1.0
-    'extends': 'eslint:recommended',
-    'parserOptions': {
-        'ecmaVersion': 2018,
-        'sourceType': 'module',
-        'ecmaFeatures': {
-            'globalReturn': false,
-            'impliedStrict': true
+    extends: 'eslint:recommended',
+    parserOptions: {
+        ecmaVersion: 2018,
+        sourceType: 'module',
+        ecmaFeatures: {
+            globalReturn: false,
+            impliedStrict: true
         }
     },
-    'globals': {
+    globals: {
         module: true,
         exports: true,
         require: true
     },
-    'rules': {
+    rules: {
         // Possible Errors
         // 'no-cond-assign': [2, 'always'], // 禁止一切在条件语句中出现赋值操作符
         'no-console': [0], // 可以使用console
         // 'no-extra-parens': [2, 'all', {nestedBinaryExpressions: false}], // 避免不必要的括号
         'no-prototype-builtins': [2], // 禁止直接使用 Object.prototypes 的内置属性
         'no-template-curly-in-string': [2], // 禁止在常规字符串中出现模板字面量占位符语法
-        'valid-jsdoc': [1], // 提醒使用有效的 JSDoc 注释
+        'valid-jsdoc': [1, { requireReturnDescription: false, requireReturn: false }], // 提醒使用有效的 JSDoc 注释
         'valid-typeof': [2, { requireStringLiterals: true }], // 强制 typeof 表达式与有效的字符串进行比较，要求 typeof 表达式只与字符串字面量或其它 typeof 表达式 进行比较，禁止与其它值进行比较
 
         // Best Practices
